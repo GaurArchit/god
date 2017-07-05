@@ -5,13 +5,21 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+<!-- jQuery library -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+<!-- Latest compiled JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<nav class="navbar navbar-default" style="background-color:green">
- <div class="container-fluid">
+<nav class="navbar navbar-default" style="background-color:green" <div class="container-fluid">
 <div class="navbar-header">
 </div>
-<a class="navbar-brand" href="#" > <img src="images\main.jpg" style="width:100px;margin-top:-8px; margin-right:-8px"></a>
+<a class="navbar-brand" href="#" > <img src="resources\main.jpg" style="width:100px;margin-top:-8px; margin-right:-8px"></a>
 <ul class="nav navbar-nav">
 
 <li > <a href="#"><span style="color:white">Home</span></a>
@@ -88,6 +96,37 @@
 
 
 
+<form action="sign" style="border: 3px solid #f1f1f1 ;margin-right:504px;margin-left:459px;color:green">
+  <div class="container">
+ 
+<h3 >  SIGN-UP </h3></p>
+<br>
+<br>
+			<label><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" style="border: 1px solid #ccc;box-sizing: border-box;" >
+<br>
+<br>
+    <label><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw"  style="border: 1px solid #ccc;box-sizing: border-box " >
+<br>
+<br>
+    <label><b>Repeat Password</b></label>
+    <input type="password" placeholder="Repeat Password" name="psw-repeat" >
+    <br>
+    <br>
+    <input type="checkbox" checked="checked"> Remember me
+    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+<br>
+    <div class="clearfix">
+     <br>
+     <br>
+      
+      <button type="submit" class="signupbtn" style="">Sign Up</button>
+    </div>
+  </div>
+ 
+ </form>
+</center>
 
 
 
@@ -135,28 +174,5 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 align="center" style="color:green"> SIGN-UP</h2>
-<form action="add" method="post">
-ENTER YOUR NAME<input type="text" name="t1">
-ENTER YOUR EMAIL<input type="text" name="t2">
-ENTER YOUR PASSWORD<input type="text" name="t3">
-COMFIRM PASSWORD<input type="text" name="t4">
-<p align="center"><input type="submit" value="submit">
-</p>
-</form>
 </body>
 </html>

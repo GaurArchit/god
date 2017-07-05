@@ -19,7 +19,7 @@
  <div class="container-fluid">
 <div class="navbar-header">
 </div>
-<a class="navbar-brand" href="#" > <img src="images\main.jpg" style="width:100px;margin-top:-8px; margin-right:-8px"></a>
+<a class="navbar-brand" href="#" > <img src="resources\main.jpg" style="width:100px;margin-top:-8px; margin-right:-8px"></a>
 <ul class="nav navbar-nav">
 
 <li  class="active"> <a href="#"><span style="color:white">Home</span></a>
@@ -97,33 +97,30 @@
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
     <li data-target="#myCarousel" data-slide-to="1"></li>
     <li data-target="#myCarousel" data-slide-to="2"></li>
-     <li data-target="#myCarousel" data-slide-to="3"></li>
+   
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner">
+  <div class="carousel-inner" style="margin-right:150px;margin-left:100px;align:center">
     <div class="item active">
-      <img src="images\fifa.jpg" alt="fifa" style="width:50%;margin-right:50px;margin-left:50px">
+      <img src="resources/spider.jpg" alt="fifa" style="width:80%;height:500px">
     </div>
 
     <div class="item">
-      <img src="images\ww2.jpg" alt="ww2" style="width:720px;margin-right:100px;margin-left:100px">
+      <img src="resources\ww2.jpg" alt="ww2" style="width:80%;height:500px">
     </div>
 
     <div class="item">
-      <img src="images\spider.jpg" alt="spider" style="width:50%;;margin-right:50px;margin-left:500px">
+      <img src="resources\super.jpg" alt="spider" style="width:80%;height:500px">
     </div>
-      <div class="item">
-      <img src="images\watchdog.jpg" alt="FOR" style="width:50%;margin-right:50px;margin-left:500px">
-    </div>
-  
+    
 </div>
   
-  <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="margin-right:100px">
+  <a class="left carousel-control" href="#myCarousel" data-slide="prev" style="margin-right:100px;margin-left:100px">
     <span class="glyphicon glyphicon-chevron-left"></span>
     <span class="sr-only">Previous</span>
   </a>
-  <a class="right carousel-control" href="#myCarousel" data-slide="next" style="margin-left:100px;margin-right:100px">
+  <a class="right carousel-control" href="#myCarousel" data-slide="next" style="margin-left:120px;margin-right:200px">
     <span class="glyphicon glyphicon-chevron-right"></span>
     <span class="sr-only">Next</span>
   </a>

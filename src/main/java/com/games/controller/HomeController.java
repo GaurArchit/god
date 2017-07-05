@@ -24,4 +24,16 @@ public String signpage()
 	return "sign";
 }
 	
+	
+@RequestMapping("/foot")
+public String footpage()
+{
+	return "foot";
+}
+	
+
+
+
+
+
 }
