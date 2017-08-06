@@ -91,7 +91,7 @@
 
 
 
-<div id="myCarousel" class="carousel slide" data-ride="carousel">
+<div id="myCarousel" class="carousel slide" data-ride="carousel"   style="margin-right:200px;margin-left:200px">
  
   <ol class="carousel-indicators">
     <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -101,7 +101,7 @@
   </ol>
 
   <!-- Wrapper for slides -->
-  <div class="carousel-inner" style="margin-right:150px;margin-left:100px;align:center">
+  <div class="carousel-inner" style="align:center">
     <div class="item active">
       <img src="resources/spider.jpg" alt="fifa" style="width:80%;height:500px">
     </div>

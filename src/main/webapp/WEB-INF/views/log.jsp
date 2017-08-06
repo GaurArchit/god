@@ -19,7 +19,7 @@
 
 </head>
 <body>
-<nav class="navbar navbar-default" style="background-color:green">
+<nav class="navbar navbar-default" style="background-color:green;width:100%">
  <div class="container-fluid">
 <div class="navbar-header">
 </div>

@@ -5,7 +5,7 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
 <title>Insert title here</title>
-<!-- Latest compiled and minified CSS -->
+
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -13,47 +13,25 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
 </head>
 <body>
-<footer>
-<div class="container">
-    <div class="panel-footer">
-  <div class="row" style="width:100%">
-  <div class="col-sm-2">
-  <h6 style="color:green"> Copy Rights @MAVRICK</h6> 
+
+
+<form>
+  <div class="form-group">
+    <label for="email">Email address:</label>
+    <input type="email" class="form-control" id="email">
   </div>
-  
-  
-  <div class="col-sm-3">
-  <h6 style="color:green">ABOUT US</h6>
-  <P>
-  csvsfvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvvv</P>
+  <div class="form-group">
+    <label for="pwd">Password:</label>
+    <input type="password" class="form-control" id="pwd">
   </div>
-  
-  
-  <div class="col-sm-4">
-  
-  <ol>
-  <li><a href="#">HOME</a></li>
-   <li><a href="#">SIGN-UP</a></li>
-
-  
-  
-  </ol>
-  
-  
-  
-  
-  
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
   </div>
-  
-  
-  
-  
-  
-  
-  
-  </div>
+  <button type="submit" class="btn btn-default">Submit</button>
+</form>
 
 
 
@@ -65,10 +43,7 @@
 
 
 
-</div>
 
-</div>
-</footer>
 
 
 

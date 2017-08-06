@@ -16,13 +16,15 @@
 
 </head>
 <body>
-<nav class="navbar navbar-default" style="background-color:green" <div class="container-fluid">
+
+<nav class="navbar navbar-default" style="background-color:green">
+ <div class="container-fluid">
 <div class="navbar-header">
 </div>
 <a class="navbar-brand" href="#" > <img src="resources\main.jpg" style="width:100px;margin-top:-8px; margin-right:-8px"></a>
 <ul class="nav navbar-nav">
 
-<li > <a href="#"><span style="color:white">Home</span></a>
+<li  class="active"> <a href="#"><span style="color:white">Home</span></a>
 
 </li>
 <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"   href="#"><span style="color:white">PC Games</span>
@@ -79,8 +81,8 @@
    
    
    <ul class="nav navbar-nav navbar-right">
-      <li class="active"><a href="WEB-INF/views/sign.jsp"><span class="glyphicon glyphicon-user" style="color:white">Sign-Up</span> </a>
-       <li><a href="#"><span class="glyphicon glyphicon-log-in"style="color:white">Log-in</span> </a>
+      <li><a href="sign.jsp"><span class="glyphicon glyphicon-user" style="color:white">Sign-Up</span> </a>
+       <li><a href="log.jsp"><span class="glyphicon glyphicon-log-in"style="color:white">Log-in</span> </a>
    </ul>
 
 
@@ -96,36 +98,15 @@
 
 
 
-<form action="sign" style="border: 3px solid #f1f1f1 ;margin-right:504px;margin-left:459px;color:green">
-  <div class="container">
- 
-<h3 >  SIGN-UP </h3></p>
-<br>
-<br>
-			<label><b>Email</b></label>
-    <input type="text" placeholder="Enter Email" name="email" style="border: 1px solid #ccc;box-sizing: border-box;" >
-<br>
-<br>
-    <label><b>Password</b></label>
-    <input type="password" placeholder="Enter Password" name="psw"  style="border: 1px solid #ccc;box-sizing: border-box " >
-<br>
-<br>
-    <label><b>Repeat Password</b></label>
-    <input type="password" placeholder="Repeat Password" name="psw-repeat" >
-    <br>
-    <br>
-    <input type="checkbox" checked="checked"> Remember me
-    <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
-<br>
-    <div class="clearfix">
-     <br>
-     <br>
-      
-      <button type="submit" class="signupbtn" style="">Sign Up</button>
-    </div>
-  </div>
- 
- </form>
+<div class="panel panel-default">
+  <div class="panel-body">Panel Content</div>
+
+
+
+
+</div>
+
+
 
 
 
