@@ -31,18 +31,14 @@ public String footpage()
 	return "foot";
 }
 	
-@RequestMapping("/sam")
-public String Sampage()
-{
-	return "sam";
-}
-	
-
 @RequestMapping("/admin")
-public String adminpage()
+public String Sampage()
 {
 	return "admin";
 }
+	
+
+
 
 
 }

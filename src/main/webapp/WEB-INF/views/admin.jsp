@@ -1,11 +1,20 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-    pageEncoding="ISO-8859-1"%>
-<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+	pageEncoding="ISO-8859-1"%>
+
+
+
+
 <html>
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
-<title>Insert title here</title>
-<!-- Latest compiled and minified CSS -->
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
+<%@ page session="false" %>
+
+<link rel="stylesheet" href="style.css">
+<meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+ <!-- Latest compiled and minified CSS -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 
 <!-- jQuery library -->
@@ -13,17 +22,22 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+<meta charset="utf-8">
+
 </head>
 <body>
+
+	<body>
 <h1>
-	Add a Person
+ADD PRODUCT	
 </h1>
 
-<c:url var="addAction" value="/person/add" ></c:url>
+<c:url var="addAction" value="/Product/add" > </c:url>
 
-<form:form action="${addAction}" commandName="person">
+<form:form action="${addAction}" commandName="product">
 <table>
-	<c:if test="${!empty person.name}">
+	<c:if test="${!empty product.id}"> 
 	<tr>
 		<td>
 			<form:label path="id">
@@ -38,31 +52,69 @@
 	</c:if>
 	<tr>
 		<td>
-			<form:label path="name">
-				<spring:message text="Name"/>
+			<form:label path="productName">
+				<spring:message text="productname"/>
 			</form:label>
 		</td>
 		<td>
-			<form:input path="name" />
+			<form:input path="productName" />
 		</td> 
 	</tr>
 	<tr>
 		<td>
-			<form:label path="country">
-				<spring:message text="Country"/>
+			<form:label path="price">
+				<spring:message text="Price"/>
 			</form:label>
 		</td>
 		<td>
-			<form:input path="country" />
+			<form:input path="price" />
 		</td>
 	</tr>
+	
+	
+	<tr>
+		<td>
+			<form:label path="quantity">
+				<spring:message text="quantity"/>
+			</form:label>
+		</td>
+		<td>
+			<form:input path="quantity" />
+		</td>
+	</tr>
+	
+	
+	
+	<tr>
+		<td>
+			<form:label path="description">
+				<spring:message text="description"/>
+			</form:label>
+		</td>
+		<td>
+			<form:input path="description" />
+		</td>
+	</tr>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
 	<tr>
 		<td colspan="2">
-			<c:if test="${!empty person.name}">
+			<c:if test="${!empty product.id}">   
 				<input type="submit"
 					value="<spring:message text="Edit Person"/>" />
 			</c:if>
-			<c:if test="${empty person.name}">
+			<c:if test="${empty product.id}">/// CHANGE THIS 
 				<input type="submit"
 					value="<spring:message text="Add Person"/>" />
 			</c:if>
@@ -71,26 +123,29 @@
 </table>	
 </form:form>
 <br>
-<h3>Persons List</h3>
-<c:if test="${!empty listPersons}">
+<h3>Product List</h3>
+<c:if test="${!empty listProduct}">/// Change This 
 	<table class="tg">
 	<tr>
-		<th width="80">Person ID</th>
-		<th width="120">Person Name</th>
-		<th width="120">Person Country</th>
+		<th width="80">Product ID</th>
+		<th width="120">Product Details</th>
+		<th width="120">Product Price</th>
+		<th width="120">Product Quantity</th>
 		<th width="60">Edit</th>
 		<th width="60">Delete</th>
 	</tr>
-	<c:forEach items="${listPersons}" var="person">
+	<c:forEach items="${listProductd}" var="product">
 		<tr>
-			<td>${person.id}</td>
-			<td>${person.name}</td>
-			<td>${person.country}</td>
-			<td><a href="<c:url value='/edit/${person.id}' />" >Edit</a></td>
-			<td><a href="<c:url value='/remove/${person.id}' />" >Delete</a></td>
+			<td>${product.id}</td>
+			<td>${product.details}</td>
+			<td>${product.price}</td>
+			<td><a href="<c:url value='/edit/${product.id}' />" >Edit</a></td>
+			<td><a href="<c:url value='/remove/${product.id}' />" >Delete</a></td>
 		</tr>
 	</c:forEach>
 	</table>
 </c:if>
 </body>
 </html>
+
+1
