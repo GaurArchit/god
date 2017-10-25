@@ -17,15 +17,15 @@ public class LoginController {
  
   String name = principal.getName();
   model.addAttribute("author", name);
-  model.addAttribute("message", "Welcome To Login Form Based Spring Security Example!!!");
-  return "welcome";
+  model.addAttribute("message", "Welcome To Login Form ");
+  return "log";
  
  }
  
  @RequestMapping(value="/login", method = RequestMethod.GET)
  public String login(ModelMap model) {
  
-  return "login";
+  return "log";
  
  }
  
@@ -33,14 +33,14 @@ public class LoginController {
  public String loginerror(ModelMap model) {
  
   model.addAttribute("error", "true");
-  return "login";
+  return "log";
  
  }
  
  @RequestMapping(value="/logout", method = RequestMethod.GET)
  public String logout(ModelMap model) {
  
-  return "login";
+  return "log";
  
  }
 }

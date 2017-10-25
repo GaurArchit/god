@@ -37,8 +37,11 @@ public String Sampage()
 	return "admin";
 }
 	
-
-
+@RequestMapping("/Viewproduct")
+public String Spage()
+{
+	return "Viewproduct";
+}
 
 
 }

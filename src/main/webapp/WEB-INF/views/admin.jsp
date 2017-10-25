@@ -1,15 +1,14 @@
-<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
-	pageEncoding="ISO-8859-1"%>
-
-
-
-
-<html>
-<head>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
 <%@ page session="false" %>
+
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+	pageEncoding="ISO-8859-1"%>
+
+<html>
+<head>
+
 
 <link rel="stylesheet" href="style.css">
 <meta charset="utf-8">
@@ -28,36 +27,26 @@
 </head>
 <body>
 
-	<body>
 <h1>
 ADD PRODUCT	
 </h1>
 
-<c:url var="addAction" value="/Product/add" > </c:url>
+<c:url var="addAction" value="/admin/Product/add" > </c:url>
 
-<form:form action="${addAction}" commandName="product">
+<form:form action="${addAction}" commandName="product" method="post"  enctype="multipart/form-data" >
+
+File to upload: <input type="file" name="file">
 <table>
-	<c:if test="${!empty product.id}"> 
+	
+	
 	<tr>
 		<td>
-			<form:label path="id">
-				<spring:message text="ID"/>
-			</form:label>
-		</td>
-		<td>
-			<form:input path="id" readonly="true" size="8"  disabled="true" />
-			<form:hidden path="id" />
-		</td> 
-	</tr>
-	</c:if>
-	<tr>
-		<td>
-			<form:label path="productName">
+			<form:label path="productname">
 				<spring:message text="productname"/>
 			</form:label>
 		</td>
 		<td>
-			<form:input path="productName" />
+			<form:input path="productname" />
 		</td> 
 	</tr>
 	<tr>
@@ -110,13 +99,13 @@ ADD PRODUCT
 	
 	<tr>
 		<td colspan="2">
-			<c:if test="${!empty product.id}">   
+			<c:if test="${product.id==0}">   
+				<input type="submit"
+					value="<spring:message text="ADD Person"/>" />
+			</c:if>
+			<c:if test="${product.id!=0}">
 				<input type="submit"
 					value="<spring:message text="Edit Person"/>" />
-			</c:if>
-			<c:if test="${empty product.id}">/// CHANGE THIS 
-				<input type="submit"
-					value="<spring:message text="Add Person"/>" />
 			</c:if>
 		</td>
 	</tr>
@@ -124,7 +113,7 @@ ADD PRODUCT
 </form:form>
 <br>
 <h3>Product List</h3>
-<c:if test="${!empty findAllProduct}">/// Change This 
+<c:if test="${!empty listProduct}">
 	<table class="tg">
 	<tr>
 		<th width="80">Product ID</th>
@@ -134,15 +123,15 @@ ADD PRODUCT
 		<th width="60">Edit</th>
 		<th width="60">Delete</th>
 	</tr>
-	<c:forEach items="${findAllProduct}" var="product">
+	<c:forEach items="${listProduct}" var="product1">
 		<tr>
-			<td>${product.id}</td>
-			<td>${product.price }</td>
-			<td>${product.productName}</td>
-			<td>${product.quantity }</td>
-			<td>${product.description }</td>
-			<td><a href="<c:url value='/edit/${product.id}' />" >Edit</a></td>
-			<td><a href="<c:url value='/remove/${product.id}' />" >Delete</a></td>
+			<td>${product1.id}</td>
+			<td>${product1.price }</td>
+			<td>${product1.productname}</td> 
+			<td>${product1.quantity }</td>
+			<td>${product1.description }</td>
+			<td><a href="<c:url value='/admin/editProduct/${product1.id}' />" >Edit</a></td>
+			<td><a href="<c:url value='/admin/deleteProduct/${product1.id}' />" >Delete</a></td>
 		</tr>
 	</c:forEach>
 	</table>
@@ -150,4 +139,4 @@ ADD PRODUCT
 </body>
 </html>
 
-1
+

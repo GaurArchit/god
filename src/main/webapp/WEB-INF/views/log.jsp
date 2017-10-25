@@ -99,51 +99,25 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<form action="sign" style="border: 3px solid #f1f1f1 ;margin-right:504px;margin-left:459px;color:green">
-  <div class="container">
- <h2 style="color:green" >LOG-IN</h2>
- 
-
-    <label><b>ENTER NAME</b></label>
-    <input type="password" placeholder="Enter Name" name="psw"  style="border: 1px solid #ccc;box-sizing: border-box " >
-<br>
-<br>
-    <label><b> ENTER PASSWORD</b></label>
-    <input type="password" placeholder="Enter Password" name="psw-repeat" >
-    <br>
-    <br>
-    <input type="checkbox" checked="checked"> Remember me
-    
-<br>
-    <div class="clearfix">
-     <br>
-     <br>
-     
-      <button type="submit" value="submit">Log-in</button>
-    </div>
+ <form action="log" method="post" style="border: 3px solid #f1f1f1 ;margin-right:504px;margin-left:459px;">
+  <div class="form-group">
+  <h2 style="color:green">LOG-IN</h2>
+    Email<label for="email"></label><span class="glyphicon glyphicon-user" style="color:white">User name:</span>
+    <input type="text" class="form-control" id="username" name="username">
   </div>
- 
- </form>
+  <div class="form-group">
+    <label for="pwd"><span class="glyphicon glyphicon-lock" style="color:white">Password:</span></label>
+    <input type="password" class="form-control" id="pwd" name="password">
+  </div>
+  <div class="checkbox">
+    <label><input type="checkbox"> Remember me</label>
+  </div>
+  <button type="submit" class="btn btn-default" > <center>login</button></center>
+  <input type="hidden" name="${_csrf.parameterName}"
+			value="${_csrf.token}" />
+</form> 
+
+
 
 <br>
 <br>
@@ -151,17 +125,26 @@
 <br>
 <br>
 <br>
-
-<br>
-<br>
-
-<br>
-<br>
-
-<br>
-<br>
-<br>
-<br>
-<jsp:include page="foot.jsp" />
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

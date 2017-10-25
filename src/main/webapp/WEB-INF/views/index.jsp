@@ -60,9 +60,6 @@
 
 
 
-
-
-
 <li class="dropdown"> <a class="dropdown-toggle" data-toggle="dropdown"   href="#"><span style="color:white">Play Station</span>
 <span class="caret"></span>   </a>
 <ul class="dropdown-menu">
@@ -73,21 +70,27 @@
 <li><a href="#"> PlayStation 4   </a></li>
 </ul>
 </li>
+
+
+
+<li class="default"> <a href="Viewproduct.jsp"><span style="color:white">All Games</span></a>   </li>
+
 </ul>
 
 
-   
+
+
+
    
    <ul class="nav navbar-nav navbar-right">
       <li><a href="#"><span class="glyphicon glyphicon-user" style="color:white">Sign-Up</span> </a>
-       <li><a href="#"><span class="glyphicon glyphicon-log-in"style="color:white">Log-in</span> </a>
+       <li><a href="log.jsp"><span class="glyphicon glyphicon-log-in"style="color:white">Log-in</span> </a>
    </ul>
 
 
 </div>
 
 </nav>
-
 
 
 
